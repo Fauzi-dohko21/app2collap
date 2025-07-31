@@ -3,9 +3,9 @@
 Ini adalah proyek sederhana untuk belajar kolaborasi menggunakan Git & Android Studio
 
 ## 👥 Tim
-⦁	M Alfian Fauzi 1 : Inisialisasi & Merge PR
-⦁	Sabila Zahrani 2 : Fitur TextView
-⦁	Meutya Candra Dewi 3 : Fitur Button
+-	M Alfian Fauzi 1 : Inisialisasi & Merge PR
+-	Sabila Zahrani 2 : Fitur TextView
+-	Meutya Candra Dewi 3 : Fitur Button
   
 ## 📱 Fitur
 - Menampilkan TextView
