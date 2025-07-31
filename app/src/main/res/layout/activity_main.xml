@@ -67,6 +67,6 @@
             android:textSize="16sp"
             android:textColor="#333"
             android:padding="12dp"
-            android:background="#ΕΘΕΘΕΘ"/>
+            android:background="@color/cardview_shadow_start_color"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
