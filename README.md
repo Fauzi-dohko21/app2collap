@@ -12,77 +12,60 @@ Ini adalah proyek sederhana untuk belajar kolaborasi menggunakan Git & Android S
 - Menampilkan Button yang dapat diklik
 
 ## 🔧 Teknologi
-- Kotlin
-- Android Studio
-- Git + GitHub
+- Kotlin : Kotlin adalah bahasa pemrograman modern yang digunakan untuk membuat aplikasi Android. 
+- Android Studio : Android Studio adalah software resmi dari Google untuk mengembangkan aplikasi Android. Di dalamnya, kamu bisa menulis kode, mendesain tampilan, dan mengetes aplikasi.
+- Git + GitHub : Git adalah alat untuk mencatat dan mengelola perubahan kode, sedangkan GitHub adalah tempat online untuk menyimpan dan membagikan project Git. Keduanya memudahkan kerja tim dan kolaborasi dari mana saja.
 
 ## 📸 Penjelasan code penting
 - import android.os.Bundle
   Fungsi: Mengimpor Bundle, yaitu objek yang digunakan untuk menyimpan data yang ingin dikirim antar activity atau saat memulihkan state Activity.
-  
-- import android.widget.Button
-- import android.widget.EditText
-- import android.widget.TextView
-  Fungsi: Mengimpor kelas UI:
-  - Button untuk tombol.
-  - EditText untuk input teks.
-  - TextView untuk menampilkan teks.
+
+- import android.widget.Button → Untuk menampilkan tombol pada UI.
+- import android.widget.EditText → Untuk membuat kolom input teks dari pengguna.
+- import android.widget.TextView → Untuk menampilkan teks ke layar.
   Ini semua adalah komponen antarmuka pengguna (UI) dalam Android.
 
 - import androidx.activity.enableEdgeToEdge
-  - Fungsi: Mengaktifkan tampilan full screen atau edge-to-edge layout, agar konten bisa muncul di belakang sistem bar (status bar dan         navigation bar).
-  - Biasanya dipakai agar aplikasi terlihat modern dan bersih.
-  
-- import androidx.appcompat.app.AppCompatActivity
-  - Fungsi: Ini adalah kelas dasar untuk membuat Activity dengan dukungan dari AndroidX (modern Android libraries).
-  - AppCompatActivity memungkinkan penggunaan fitur-fitur modern sambil tetap kompatibel dengan versi Android lama.
-  
-- import androidx.core.view.ViewCompat
-- import androidx.core.view.WindowInsetsCompat
-  - Fungsi: ViewCompat: Kelas pembantu agar kode bisa berjalan kompatibel di berbagai versi Android.
-          WindowInsetsCompat: Digunakan untuk mengatur padding/layout agar tidak tertutup oleh status bar atau navigation bar. Berguna untuk UI responsif.
+Fungsi: Mengaktifkan tampilan layar penuh (full screen), supaya konten aplikasi bisa tampil sampai ke pinggir layar, termasuk di belakang status bar dan navigation bar.
+Tujuan: Membuat tampilan aplikasi terlihat lebih modern, bersih, dan luas.
+-import androidx.appcompat.app.AppCompatActivity
+Fungsi: AppCompatActivity Digunakan sebagai dasar untuk membuat sebuah Activity (layar tampilan aplikasi).
+ memberikan dukungan fitur-fitur modern dan tetap bisa dijalankan di Android versi lama.
+-import androidx.core.view.ViewCompat
+Fungsi: Membantu agar kode bisa berjalan lancar di berbagai versi Android.
+Sederhananya: Biar aplikasi tetap kompatibel meskipun dijalankan di Android versi lama atau baru.
+-import androidx.core.view.WindowInsetsCompat
+Fungsi: Mengatur agar tampilan tidak tertutup oleh status bar atau navigation bar.
+Gunanya: Biar layout aplikasi bisa menyesuaikan otomatis, jadi UI tetap rapi dan nyaman dilihat di semua perangkat.
 
-- private lateinit var inputName: EditText
-- private lateinit var inputKelas: EditText
-- private lateinit var btnSubmit: Button
-- private lateinit var txtResult: TextView
-  - Fungsi: - private
-            Artinya properti ini hanya bisa diakses dari dalam class MainActivity.
-            Ini adalah encapsulation: menyembunyikan detail internal agar tidak bisa diakses sembarangan dari luar.
-          - lateinit
-            Artinya: variabel ini akan di-inisialisasi nanti, bukan saat dibuat.
-          - var
-            Artinya: Menandakan ini adalah mutable variable — bisa diubah nilainya.
-  - kesimpulan: private lateinit var namaVariabel: Tipe
-              berarti:
-              Inisialisasi variabel ini nanti (bukan saat deklarasi), dan variabel ini hanya bisa diakses dari dalam class
+- private lateinit var inputName: EditText → Kolom untuk mengetik nama.
+- private lateinit var inputKelas: EditText → Kolom untuk mengetik kelas.
+- private lateinit var btnSubmit: Button → Tombol untuk mengirim atau memproses data input.
+- private lateinit var txtResult: TextView → Tempat menampilkan hasil output ke layar.
 
-- override fun onCreate
-  - Fungsi: - fun onCreate(...)
-            Fungsi yang dipanggil satu kali saat activity diluncurkan (pertama kali dibuka).
-          - override
-            Menandakan bahwa fungsi ini mengganti (meng-override) versi aslinya dari AppCompatActivity.
-            AppCompatActivity sudah punya onCreate() bawaan.
-            Kita meng-override agar bisa menambahkan logika sendiri saat Activity dimulai.
+- override fun onCreate → Fungsi yang jalan pertama kali saat aplikasi dibuka.
+- setContentView(R.layout.activity_main) → Perintah untuk menampilkan tampilan yang sudah dibuat di XML ke layar. Jadi, desain yang kamu buat di activity_main.xml akan langsung muncul saat aplikasi dibuka.
   
-- setContentView(R.layout.activity_main)
-  - Fungsi: perintah untuk menampilkan layout XML ke layar saat aplikasi dibuka.
-  
-- inputName = findViewById(R.id.etNama)
-- inputKelas = findViewById(R.id.etKelas)
-- btnSubmit = findViewById(R.id.btnTampilkan)
-- txtResult = findViewById(R.id.tvHasil)
-  - Fungsi: untuk menghubungkan (menginisialisasi) variabel di Kotlin dengan komponen UI yang kamu buat di file XML (activity_main.xml).
-
+- inputName = findViewById(R.id.etNama) → Menghubungkan variabel inputName dengan kotak input nama di tampilan
+- inputKelas = findViewById(R.id.etKelas) → Menghubungkan inputKelas dengan kotak input kelas di tampilan.
+- btnSubmit = findViewById(R.id.btnTampilkan) → Menghubungkan btnSubmit dengan tombol yang akan ditekan oleh pengguna.
+- txtResult = findViewById(R.id.tvHasil) → Menghubungkan txtResult dengan teks hasil yang akan ditampilkan di layar.
+ 
 - btnSubmit.setOnClickListener {
     val nama = inputName.text.toString().trim()
     var kelas = inputKelas.text.toString().trim()
     var hasil = "Nama: $nama\nKelas: $kelas"
     txtResult.text = hasil
   }
-  - Fungsi: Menangani aksi saat tombol btnSubmit ditekan, lalu menampilkan hasil input ke layar.
+  Fungsi: Kode ini akan menangani saat tombol ditekan, lalu mengambil input nama dan kelas, dan menampilkannya ke layar dalam format yang rapi.
 
 ## 📸 Screenshot
+
+<img width="1255" height="543" alt="Screenshot 2025-07-31 122040" src="https://github.com/user-attachments/assets/65565586-58ba-4315-815f-156c0d5ba938" />
+<img width="1215" height="626" alt="Screenshot 2025-07-31 122059" src="https://github.com/user-attachments/assets/4ac33458-1132-41e0-b626-96193e59d22c" />
+<img width="945" height="592" alt="Screenshot 2025-07-31 122125" src="https://github.com/user-attachments/assets/21fdbcfb-bf9d-440b-a1da-7e6640c341af" />
+
+
 
 
   
