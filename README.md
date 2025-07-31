@@ -61,9 +61,21 @@ Gunanya: Biar layout aplikasi bisa menyesuaikan otomatis, jadi UI tetap rapi dan
 
 ## 📸 Screenshot
 
-<img width="1255" height="543" alt="Screenshot 2025-07-31 122040" src="https://github.com/user-attachments/assets/65565586-58ba-4315-815f-156c0d5ba938" />
-<img width="1215" height="626" alt="Screenshot 2025-07-31 122059" src="https://github.com/user-attachments/assets/4ac33458-1132-41e0-b626-96193e59d22c" />
-<img width="945" height="592" alt="Screenshot 2025-07-31 122125" src="https://github.com/user-attachments/assets/21fdbcfb-bf9d-440b-a1da-7e6640c341af" />
+<img width="4604" height="6904" alt="activity main xml" src="https://github.com/user-attachments/assets/546dcd9e-a587-4917-bfad-c7317c9c6653" /> 
+(Activity.main.xml)
+<img width="4064" height="4300" alt="MainActivity" src="https://github.com/user-attachments/assets/571bbd5c-95f3-4d8d-a093-5479e50f8f28" />
+(MainActivity)
+<img width="3384" height="2536" alt="Splash" src="https://github.com/user-attachments/assets/f936a0f4-6fe7-4d9d-b776-aba10d6fb99a" />
+(splash)
+<img width="2920" height="3712" alt="activity splash xml" src="https://github.com/user-attachments/assets/39c45a41-ecf5-4a33-a2e9-ae64bebbfdca" />
+(Activity.splash.xml)
+
+<img width="269" height="480" alt="Screenshot 2025-07-31 132729" src="https://github.com/user-attachments/assets/b8deecf5-2a32-45c0-8672-665edf8adca6" />
+<img width="173" height="313" alt="Screenshot 2025-07-31 132834" src="https://github.com/user-attachments/assets/6f5c9c38-9858-44cd-a685-8af0011feb8e" />
+
+
+
+
 
 
 
