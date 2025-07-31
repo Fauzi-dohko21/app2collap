@@ -7,13 +7,66 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
 
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Form Biodata Siswa"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/Nama"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Masukkan Nama"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#0099CC" />
+
+        <EditText
+            android:id="@+id/Kelas"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Masukkan Kelas"
+            android:inputType="text"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#0099CC" />
+
+        <Button
+            android:id="@+id/btnTampilkan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tampilkan"
+            android:textAllCaps="false"
+            android:backgroundTint="#6699FF"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/Hasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:padding="12dp"
+            android:background="#ΕΘΕΘΕΘ"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
